@@ -10,7 +10,7 @@ then
     git pull origin docker-nov
     cd addressbook-v1
 else
-  git clone https://github.com/preethid/addressbook-v1.git
+  git clone https://github.com/Akhilaakhilaakhila/addressbook-v1.git
 fi
 
 cd addressbook-v1
