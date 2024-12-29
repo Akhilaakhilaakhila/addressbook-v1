@@ -46,12 +46,13 @@ pipeline {
                 message "Select name of package"
                 ok "platform Seleted"
                 parameters{
-                    choice(name:'NEWAPP',choices:['EKS','EC2','On-prem'])
+                    choice(name:'Platform',choices:['EKS','EC2','On-prem'])
                 }
             }
             steps {
                script{
                    echo "packing code"
+                   echo "platform is ${params.Platform}"
                    echo "packing version ${params.APPVERSION}"
                }
             }
