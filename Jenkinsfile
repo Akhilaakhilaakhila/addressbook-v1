@@ -33,16 +33,10 @@ pipeline {
         stage('Package') {
             steps {
                script{
-                   echo "index.html file"
+                   echo "packing code"
                }
             }
         }
-        stage('Artifact') {
-            steps {
-               script{
-                   echo "jfrog"
-               }
-            }
-        }
+        
     }
 }
