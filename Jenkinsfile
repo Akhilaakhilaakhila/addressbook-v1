@@ -38,8 +38,8 @@ pipeline {
             //     }
             // }
         }
-         stage('UniTest') {//slave1
-          // agent {label 'linux_slave'}
+         stage('UniTest') 
+           agent {label 'linux_slave'}
              agent any
             when{
                 expression{
