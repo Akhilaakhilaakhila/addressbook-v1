@@ -39,15 +39,8 @@ pipeline {
             // }
         }
          stage('UniTest') 
-           agent {label 'linux_slave'}
              agent any
-            when{
-                expression{
-                    params.executeTests == true
-                }
-            }
-            
-            steps {
+           teps {
                 echo 'UnitTest the code'
                 sh "mvn test"
             }
