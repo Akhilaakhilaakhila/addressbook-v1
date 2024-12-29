@@ -10,10 +10,10 @@ pipeline {
 
     // }
     environment{
-        DEV_SERVER='ec2-user@172.31.8.175'
+        DEV_SERVER='ec2-user@172.31.1.231'
        IMAGE_NAME='devopstrainer/java-mvn-privaterepos:$BUILD_NUMBER'
         //IMAGE_NAME='newaxisdevops.jfrog.io/addbook-docker/addbook:$BUILD_NUMBER'
-        DEPLOY_SERVER='ec2-user@172.31.7.50'
+        DEPLOY_SERVER='ec2-user@172.31.0.80'
     }
     stages {
         stage('Compile') {
