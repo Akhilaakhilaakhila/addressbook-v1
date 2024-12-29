@@ -200,7 +200,8 @@
                   <plugin>
                 <groupId>org.apache.maven.plugins</groupId>
                     <artifactId>maven-war-plugin</artifactId>
-                        <version>2.1.1</version>
+                        <version>3.3.1</version>
+		
                         </plugin>
 
                         <plugin>
@@ -514,10 +515,17 @@
                     <plugin>
                         <groupId>org.apache.maven.plugins</groupId>
                         <artifactId>maven-jxr-plugin</artifactId>
-                        <version>2.1</version>
-                    </plugin>
-                </plugins>
-            </reporting>
-        </profile>
+			<version>2.1</version>  
+		</plugin>
+		</plugins>
+	</reporting>
+    </profile>
 </profiles>
+<distributionManagement>
+    <repository>
+        <id>central</id>
+        <name>a0vwgx6bw87pa-artifactory-primary-0-releases</name>
+        <url>https://trial6oxszw.jfrog.io/artifactory/adbook-libs-release</url>
+    </repository>
+</distributionManagement>
 </project>
