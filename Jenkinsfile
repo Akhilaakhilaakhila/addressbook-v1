@@ -23,6 +23,11 @@ pipeline {
             }
         }
         stage('UnitTest') {
+            when{
+                expression{
+                    params.executeTests == true
+                }
+            }
             steps {
                script{
                    echo "UnitTest in Junit"
