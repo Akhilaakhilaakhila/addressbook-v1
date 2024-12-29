@@ -11,7 +11,7 @@ pipeline {
     // }
     environment{
         DEV_SERVER='ec2-user@172.31.1.231'
-       IMAGE_NAME='devopstrainer/java-mvn-privaterepos:$BUILD_NUMBER'
+       IMAGE_NAME='akhila708/newfile:$BUILD_NUMBER'
         //IMAGE_NAME='newaxisdevops.jfrog.io/addbook-docker/addbook:$BUILD_NUMBER'
         DEPLOY_SERVER='ec2-user@172.31.0.80'
     }
