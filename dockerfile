@@ -16,4 +16,3 @@ COPY --from=build-stage /app/target/*.war /usr/local/tomcat/webapps/
 expose 8080
 
 CMD ["catalina.sh", "run"]
-
