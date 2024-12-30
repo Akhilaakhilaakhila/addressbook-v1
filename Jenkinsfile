@@ -1,5 +1,5 @@
 pipeline {
-    agent any
+    agent none
     parameters{
         string(name:'Env',defaultValue:'Test',description:'environment to deploy')
         booleanParam(name:'executeTests',defaultValue: true,description:'decide to run tc')
@@ -8,6 +8,7 @@ pipeline {
 
      stages {
         stage('Compile') {
+            agent any
             steps {
                script{
                    echo "Compiling the code"
@@ -17,6 +18,7 @@ pipeline {
             }
         }
         stage('CodeReview') {
+            agent any
             steps {
                script{
                    echo "Codereview using pmd"
@@ -25,6 +27,7 @@ pipeline {
             }
         }
         stage('UnitTest') {
+            agent any
             when{
                 expression{
                     params.executeTests == true
@@ -44,6 +47,7 @@ pipeline {
         }
         
         stage('CodeCoverage') {
+            agent {label 'linux_slave'}
             steps {
                script{
                    echo "geting xml files"
@@ -52,6 +56,7 @@ pipeline {
             }
         }
         stage('Package') {
+            agent any
             input{
                 message "Select name of package"
                 ok "platform Seleted"
