@@ -1,5 +1,9 @@
 pipeline {
     agent none
+
+    tools{
+        maven "mymaven"
+    }
     parameters{
         string(name:'Env',defaultValue:'Test',description:'environment to deploy')
         booleanParam(name:'executeTests',defaultValue: true,description:'decide to run tc')
