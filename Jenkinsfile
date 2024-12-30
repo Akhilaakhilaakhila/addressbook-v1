@@ -37,6 +37,11 @@ pipeline {
                }
             }
         }
+        post{
+            always{
+                junit 'target/surefire-reports/*xml'
+            }
+        }
         stage('CodeCoverage') {
             steps {
                script{
