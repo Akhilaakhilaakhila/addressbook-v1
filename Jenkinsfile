@@ -6,7 +6,7 @@ pipeline {
    }
 
    environment{
-    DEV_SERVER_IP='ec2-user@172.31.8.207'
+    DEV_SERVER_IP='ec2-user@172.31.1.231'
     //DEPLOY_SERVER_IP='ec2-user@172.31.0.80'
     IMAGE_NAME='akhila708/newfile'
    }
