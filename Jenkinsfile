@@ -1,19 +1,19 @@
 pipeline {
     agent none
     tools {
-        maven 'mymaven' 
+        maven 'maven' 
     }
-    // parameters{
-    //     string(name:'Env',defaultValue:'Test',description:'version to deploy')
-    //     booleanParam(name:'executeTests',defaultValue: true,description:'decide to run tc')
-    //     choice(name:'APPVERSION',choices:['1.1','1.2','1.3'])
+      parameters{
+         string(name:'Env',defaultValue:'Test',description:'version to deploy')
+         booleanParam(name:'executeTests',defaultValue: true,description:'decide to run tc')
+         choice(name:'APPVERSION',choices:['1.1','1.2','1.3'])
 
-    // }
+    }
     environment{
-        DEV_SERVER='ec2-user@172.31.8.175'
-       IMAGE_NAME='devopstrainer/java-mvn-privaterepos:$BUILD_NUMBER'
+        DEV_SERVER='ec2-user@172.31.1.231'
+       IMAGE_NAME='akhila708/newfile:$BUILD_NUMBER'
         //IMAGE_NAME='newaxisdevops.jfrog.io/addbook-docker/addbook:$BUILD_NUMBER'
-        DEPLOY_SERVER='ec2-user@172.31.7.50'
+        DEPLOY_SERVER='ec2-user@172.31.0.80'
     }
     stages {
         stage('Compile') {
@@ -131,3 +131,4 @@ pipeline {
           }
     }
 }
+   
