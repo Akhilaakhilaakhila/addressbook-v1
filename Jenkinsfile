@@ -2,14 +2,14 @@ pipeline {
    agent none
    tools{
 //     jdk "myjava"
-        maven "mymaven"
+        maven "maven"
    }
 
    environment{
-    DEV_SERVER_IP='ec2-user@172.31.13.182'
+    DEV_SERVER_IP='ec2-user@172.31.10.172'
     //DEPLOY_SERVER_IP='ec2-user@172.31.11.81'
-    IMAGE_NAME='devopstrainer/java-mvn-privaterepos:$BUILD_NUMBER'
-    ACM_IP='ec2-user@172.31.8.163'
+    IMAGE_NAME='akhila708/newfile:$BUILD_NUMBER'
+    ACM_IP='ec2-user@172.31.6.40'
     AWS_ACCESS_KEY_ID=credentials('ACCESS_KEY')
     AWS_SECRET_ACCESS_KEY=credentials('SECRET_ACCESS_KEY')
     DOCKER_REG_PASSWORD=credentials("DOCKER_REG_PASSWORD")
